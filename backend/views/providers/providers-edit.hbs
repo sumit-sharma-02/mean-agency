@@ -11,75 +11,79 @@
       <!-- Nested Row within Card Body -->
       <div class="row o-hidden border-0">
         <div class="col-lg-12">
-          <form class="user">
+          <form class="user" action="/providers/update/{{id}}" method="post">
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="inputFirstName">First Name</label>
-                <input type="text" class="form-control form-control-user" name="firstname" id="inputFirstName"  required>
+                <input type="text" class="form-control form-control-user" name="firstname" id="inputFirstName"
+                  value="{{provider.firstname}}" required>
               </div>
               <div class="col-sm-6">
                 <label for="inputLastName">Last Name</label>
                 <input type="text" class="form-control form-control-user" name="lastname" id="inputLastName"
-                    required>
+                  value="{{provider.lastname}}" required>
               </div>
             </div>
             <div class="form-group">
               <label for="inputPosition">Position</label>
               <input type="text" class="form-control form-control-user" name="position" id="inputPosition"
-                  required>
+                value="{{provider.position}}" required>
             </div>
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="inputEmail">Email</label>
                 <input type="email" class="form-control form-control-user" name="email" id="inputEmail"
-                   required>
+                  value="{{provider.company.email}}" required>
               </div>
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="inputPhone">Phone</label>
                 <input type="phone" class="form-control form-control-user" name="phone" id="inputPhone"
-                   required>
+                  value="{{provider.company.phone}}" required>
               </div>
             </div>
             <hr class="divider my-4">
             <div class="form-group">
               <label for="inputCompanyName">Company</label>
               <input type="text" class="form-control form-control-user" name="company_name" id="inputCompanyName"
-                 required>
+                value="{{provider.company.company_name}}" required>
             </div>
             <div class="form-group">
               <label for="inputAddress">Address</label>
               <input type="text" class="form-control" name="address" id="inputAddress"
-                 required>
+                value="{{provider.company.address}}" required>
             </div>
             <div class="form-group">
               <label for="inputAddress2">Address 2</label>
-              <input type="text" class="form-control" name="address2" id="inputAddress2">
+              <input type="text" class="form-control" name="address2" value="{{provider.company.address2}}"
+                id="inputAddress2">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" name="city" id="inputCity"  required>
+                <input type="text" class="form-control" name="city" value="{{provider.company.city}}" id="inputCity"
+                  required>
               </div>
               <div class="form-group col-md-4">
                 <label for="inputState">State</label>
-                <input type="text" class="form-control" name="state" id="inputState" maxlength="2"
-                   required>
+                <input type="text" class="form-control" name="state" id="inputState" value="{{provider.company.state}}"
+                  maxlength="2" required>
               </div>
               <div class="form-group col-md-2">
                 <label for="inputZipCode">Zip Code</label>
                 <input type="text" class="form-control" name="postal_code" id="inputZipCode"
-                   maxlength="5" required>
+                  value="{{provider.company.postal_code}}" maxlength="5" required>
               </div>
             </div>
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="inputDescription">Description</label>
                 <textarea class="form-control form-control-user" name="description" id="inputDescription"
-                  required></textarea>
+                  required>{{provider.company.description}}</textarea>
               </div>
               <div class="col-sm-6">
                 <label for="inputTagLine">Tag Line</label>
-                <textarea class="form-control form-control-user" name="tagline" id="inputTagLine" required></textarea>
+                <textarea class="form-control form-control-user" name="tagline" id="inputTagLine"
+                  required>{{provider.company.tagline}}</textarea>
               </div>
             </div>
             <button class="btn btn-primary btn-block" type="submit">Update Provider</button>
