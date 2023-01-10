@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00b7ff;
+  }
+  
+  .btn-google:hover {
+    color: #fff;
+    background-color: red;
+    border-color: white;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .btn-facebook:hover {
+    color: #fff;
+    background-color: darkblue;
+    border-color: white;
+    transition: all 300ms ease-in-out;
+  }
+  
+  form.user .btn-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 0.7rem 1rem;
+    transition: all 300ms ease-in-out;
+  }
+  
+  form.user .btn-user:hover {
+  font-size: 0.9rem;
+  }
+  
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar {
+    /* height: 18px; */
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: #ff5700c4;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    opacity: 0.3;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  

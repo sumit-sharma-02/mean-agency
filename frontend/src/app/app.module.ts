@@ -10,6 +10,8 @@ import { ProvidersComponent } from './providers/providers.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     ContactComponent,
     NotFoundComponent,
+    NavComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
