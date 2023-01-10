@@ -6,15 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mean-agency';
-  count:number = 0;
-  countGreaterThanFive:boolean = false
-  inputValue = "asdad";
-
-  setCount = () => {
-    this.count += 1;
-    if(this.count > 5) {
-      this.countGreaterThanFive = true;
-    }
-  }
+  // Shell Component
 }

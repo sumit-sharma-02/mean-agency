@@ -1,1 +1,5 @@
-<p>home works!</p>
+<h1>{{ title }}</h1>
+<input type="text" [(ngModel)]="inputValue" />
+<button type="button" (click)="setCount()">Click ME!!</button>
+<h4 [style]="{ color: countGreaterThanFive ? 'green' : 'red' }">{{ count }}</h4>
+<h3>{{ inputValue }}</h3>

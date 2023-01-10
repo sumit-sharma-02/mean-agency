@@ -53,14 +53,5 @@
 </div>
 
 <div class="content" role="main">
-  <h1>{{title}}</h1>
-  <input type="text" [(ngModel)]="inputValue" />
-  <button type="button" (click)="setCount()">Click ME!!</button>
-  <h4 [style]="{color: countGreaterThanFive ? 'green': 'red'}">{{count}}</h4>
-  <h3>{{inputValue}}</h3>
-  <app-about></app-about>
-  <app-login></app-login>
-  <app-register></app-register>
+  <router-outlet></router-outlet>
 </div>
-
-<router-outlet></router-outlet>
