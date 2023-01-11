@@ -11,20 +11,36 @@
       <!-- Nested Row within Card Body -->
       <div class="row o-hidden border-0">
         <div class="col-lg-12">
-          <h1 class="mt-0" *ngIf="submitted">Added successfully!!</h1>
+          <h1 class="mt-0 text-success" *ngIf="submitted">
+            Added successfully!!
+          </h1>
+
           <form
             [formGroup]="providersForm"
             class="user"
             (ngSubmit)="handleSubmit()"
+            *ngIf="!submitted"
           >
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="inputFirstName">First Name</label>
+                <span
+                  class="text-danger"
+                  *ngIf="formCheck['firstname']?.touched && formCheck['firstname']?.errors?.['required']"
+                >
+                  *Required
+                </span>
                 <input
                   type="text"
                   class="form-control form-control-user"
                   formControlName="firstname"
                 />
+                <div
+                  class="text-danger"
+                  *ngIf="formCheck['firstname']?.touched && formCheck['firstname']?.errors?.['minlength']"
+                >
+                  Minimum 2 characters required.
+                </div>
               </div>
               <div class="col-sm-6">
                 <label for="inputLastName">Last Name</label>
@@ -46,19 +62,46 @@
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="inputEmail">Email</label>
+                <span
+                  class="text-danger"
+                  *ngIf="formCheck['email']?.touched && formCheck['email']?.errors?.['required']"
+                  > *Required</span
+                >
                 <input
                   type="email"
                   class="form-control form-control-user"
                   formControlName="email"
                 />
+                <div
+                  class="text-danger"
+                  *ngIf="
+                    formCheck['email']?.touched && formCheck['email']?.invalid
+                  "
+                >
+                  Invalid email
+                </div>
               </div>
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <label for="inputPhone">Phone</label>
+                <span
+                  class="text-danger"
+                  *ngIf="formCheck['phone']?.touched && formCheck['phone']?.errors?.['required']"
+                  >*Required</span
+                >
                 <input
                   type="phone"
                   class="form-control form-control-user"
                   formControlName="phone"
                 />
+                <div
+                  class="text-danger"
+                  *ngIf="
+                    formCheck['phone']?.touched && formCheck['phone']?.errors?.['pattern']
+                  "
+                >
+                  Enter as: 234-567-8900 <br />
+                  Area code cannot start with 0 or 1.
+                </div>
               </div>
             </div>
             <hr class="divider my-4" />
@@ -72,20 +115,37 @@
             </div>
             <div class="form-group">
               <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" formControlName="address" />
+              <input
+                type="text"
+                class="form-control"
+                formControlName="address"
+              />
             </div>
             <div class="form-group">
               <label for="inputAddress2">Address 2</label>
-              <input type="text" class="form-control" formControlName="address2" />
+              <input
+                type="text"
+                class="form-control"
+                formControlName="address2"
+              />
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" formControlName="city" />
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="city"
+                />
               </div>
               <div class="form-group col-md-4">
                 <label for="inputState">State</label>
-                <input type="text" class="form-control" formControlName="state" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="state"
+                  required
+                />
               </div>
               <div class="form-group col-md-2">
                 <label for="inputZipCode">Zip Code</label>
@@ -113,7 +173,7 @@
                 ></textarea>
               </div>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">
+            <button [disabled]="providersForm.invalid" class="btn btn-primary btn-lg btn-block" type="submit">
               Add Provider
             </button>
           </form>
