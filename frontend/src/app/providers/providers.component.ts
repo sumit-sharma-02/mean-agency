@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {providers}  from '../models/providers.data';
+import { providers } from '../models/providers.data';
 
 @Component({
   selector: 'app-providers',
@@ -7,5 +7,5 @@ import {providers}  from '../models/providers.data';
   styleUrls: [],
 })
 export class ProvidersComponent {
-  providers = providers
+  providers = providers;
 }

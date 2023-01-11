@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProvidersComponent } from './providers/providers.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddProvidersComponent } from './providers/add-providers/add-providers.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "register", component: RegisterComponent},
   {path: "providers", component: ProvidersComponent},
+  {path: "providers/add-provider", component: AddProvidersComponent},
   {path: "**", component: NotFoundComponent},
 ];
 

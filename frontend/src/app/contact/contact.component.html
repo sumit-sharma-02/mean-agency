@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <form>
+      <form #contactForm="ngForm" (ngSubmit)="handleSubmit(contactForm)" >
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="validationDefault01">First name</label>
@@ -22,6 +22,8 @@
               name="firstname"
               id="validationDefault01"
               required
+              [value]=""
+              ngModel
             />
           </div>
           <div class="col-md-4 mb-3">
@@ -32,6 +34,8 @@
               name="lastname"
               id="validationDefault02"
               required
+              [value]=""
+              ngModel
             />
           </div>
           <div class="col-md-4 mb-3">
@@ -42,6 +46,8 @@
               name="phone"
               id="validationDefault03"
               required
+              [value]=""
+              ngModel
             />
           </div>
         </div>
@@ -53,6 +59,8 @@
             id="messageFormControlTextarea1"
             rows="3"
             required
+            [value]=""
+            ngModel
           ></textarea>
         </div>
         <button class="btn btn-primary btn-block" type="submit">

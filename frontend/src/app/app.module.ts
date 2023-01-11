@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutModule } from './about/about.module';
 import { UserModule } from './user/user.module';
-import { ProvidersComponent } from './providers/providers.component';
+import { ProvidersModule } from './providers/providers.module';
+
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -16,7 +17,6 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ProvidersComponent,
     HomeComponent,
     ContactComponent,
     NotFoundComponent,
@@ -28,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     FormsModule,
     AboutModule,
-    UserModule
+    UserModule,
+    ProvidersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
