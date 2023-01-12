@@ -65,7 +65,9 @@ $ cd mean-agency
 $ npm install
 $ cd backend
 $ nodemon
---> Open another terminal
+```
+Open another terminal
+```shell
 $ cd frontend
 $ npm start
 ```
