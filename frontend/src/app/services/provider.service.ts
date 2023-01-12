@@ -28,7 +28,15 @@ export class ProviderService {
   }
 
   // PUT update a record
-  updateProvider(id: number, updatedProvider: ProviderClass): Observable<ProviderClass> {
+  updateProvider(
+    id: number,
+    updatedProvider: ProviderClass
+  ): Observable<ProviderClass> {
     return this.http.put<ProviderClass>(this.apiUrl + id, updatedProvider);
+  }
+
+  //DELETE delete a record
+  deleteProvider(id: number): Observable<any> {
+    return this.http.delete(this.apiUrl + id);
   }
 }

@@ -1,1 +1,63 @@
-<p>details-providers works!</p>
+<!-- Provider Details Section -->
+<section class="page-section" id="providers-details">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ provider?.company.company_name }}</h2>
+    <hr class="divider my-4" />
+
+    <div class="row my-4">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Description</h5>
+            <p class="card-text">{{ provider?.company.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tag Line</h5>
+            <p class="card-text">{{ provider?.company.tagline }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Address</th>
+            <th scope="col">Address2</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Zip Code</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ id }}</th>
+            <td>{{ provider?.company.address }}</td>
+            <td>{{ provider?.company.address2 }}</td>
+            <td>{{ provider?.company.city }}</td>
+            <td>{{ provider?.company.state }}</td>
+            <td>{{ provider?.company.postal_code }}</td>
+            <td>{{ provider?.company.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row my-4">
+      <div class="col-sm-12 text-center">
+        <a
+          class="btn btn-secondary btn-md"
+          style="font-size: 14px"
+          routerLink="/providers/edit/{{ id }}"
+          >Edit Provider</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
