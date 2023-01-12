@@ -64,11 +64,13 @@ $ git clone https://github.com/sumit-sharma/mean-agency.git
 $ cd mean-agency
 $ npm install
 $ cd backend
+$ npm install
 $ nodemon
 ```
 Open another terminal
 ```shell
 $ cd frontend
+$ npm install
 $ npm start
 ```
 
