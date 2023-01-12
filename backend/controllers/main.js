@@ -1,6 +1,6 @@
 // main controller
 module.exports.home = function (req, res) {
-  res.render("index", { title: "The MEAN Stack Agency" });
+  res.render("index", { title: "The MEAN Agency" });
 };
 
 module.exports.about = function (req, res) {
