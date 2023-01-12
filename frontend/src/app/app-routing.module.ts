@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { ProvidersComponent } from './providers/providers.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddProvidersComponent } from './providers/add-providers/add-providers.component';
+import { EditProvidersComponent } from './providers/edit-providers/edit-providers.component';
+import { DetailsProvidersComponent } from './providers/details-providers/details-providers.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "register", component: RegisterComponent},
   {path: "providers", component: ProvidersComponent},
-  {path: "providers/add-provider", component: AddProvidersComponent},
+  {path: "providers/add", component: AddProvidersComponent},
+  {path: "providers/edit/:id", component: EditProvidersComponent},
+  {path: "providers/details/:id", component: DetailsProvidersComponent},
   {path: "**", component: NotFoundComponent},
 ];
 

@@ -21,4 +21,14 @@ export class ProviderService {
   addProviders(newProvider: ProviderClass): Observable<any> {
     return this.http.post(this.apiUrl, newProvider);
   }
+
+  // GET one record
+  getProvider(id: number): Observable<any> {
+    return this.http.get(this.apiUrl + id);
+  }
+
+  // PUT update a record
+  updateProvider(id: number, updatedProvider: ProviderClass): Observable<ProviderClass> {
+    return this.http.put<ProviderClass>(this.apiUrl + id, updatedProvider);
+  }
 }

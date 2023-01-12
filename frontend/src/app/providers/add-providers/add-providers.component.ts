@@ -29,7 +29,6 @@ export class AddProvidersComponent implements OnInit {
   }
 
   handleSubmit = () => {
-    console.log(this.providersForm.value);
     this.buildProvider();
     if (!this.isInvalidEmail()) {
       this.providerService.addProviders(this.provider).subscribe({
@@ -122,7 +121,7 @@ export class AddProvidersComponent implements OnInit {
       postal_code: new FormControl(''),
       phone: new FormControl('', [
         Validators.required,
-        Validators.pattern('^[2-9]{3}-[0-9]{3}-[0-9]{4}$'),
+        Validators.pattern('^[2-9]{1}[0-9]{2}-[0-9]{3}-[0-9]{4}$'),
       ]),
       email: new FormControl('', [Validators.required, Validators.email]),
       description: new FormControl(''),
